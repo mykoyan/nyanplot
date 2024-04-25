@@ -39,7 +39,6 @@ def read_file(filename="filename"):
     data = np.zeros(0)
     for i in range(N):
         num_row,num_colum,inputdata = read_sheet(sheetn[i],filename)
-        inputdata[1] = inputdata[1]**2
         data = np.append(data,inputdata)
     data = data.reshape([N,num_colum,num_row])
     return (data,sheetn)
